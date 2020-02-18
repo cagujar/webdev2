@@ -1,0 +1,33 @@
+{
+  "name": "cagujar_npm",
+  "version": "1.0.0",
+  "description": "learning npm",
+  "main": "index.js",
+  "scripts": {
+    "npm-start": "how-to-npm",
+    "npm-verify": "how-to-npm verify ",
+    "verify-login": "npm whoami",
+    "login": "npm adduser",
+    "npm-init": "npm init --scope=cagujar",
+    "npm-ok": "how-to-npm verify OK",
+    "extra-credit": "how-to-npm verify extra credit",
+    "publish": "publish",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "cagujar",
+  "license": "ISC",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2",
+    "how-to-npm": "^2.5.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cagujar/cagujar_npm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cagujar/cagujar_npm/issues"
+  },
+  "homepage": "https://github.com/cagujar/cagujar_npm#readme"
+}
