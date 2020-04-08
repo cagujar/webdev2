@@ -2,6 +2,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
 const FacebookStrategy = require('passport-facebook');
 const GitHubStrategy = require('passport-github').Strategy;
+const tumblr = require('tumblr');
 const keys = require('./keys');
 const User = require('../models/user-model');
 
@@ -137,3 +138,4 @@ passport.use(
         }
     )
     );
+
