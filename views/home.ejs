@@ -36,11 +36,28 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/auth/login">Login</a>
       </li>
+      <% if(user) { %>
+      <li class="nav-item active">
+        <a class="nav-link dropdown-toggle" href="/profile"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile<span class="sr-only">(current)</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/auth/logout">Logout</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link dropdown-toggle" href="/profile"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Human Resource Table<span class="sr-only">(current)</span></a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/hr/emp">Employees</a>
+          <a class="dropdown-item" href="/hr/dept">Departments</a>
+          <a class="dropdown-item" href="/hr/empdept">Employees w/ Departments</a>
+          <a class="dropdown-item" href="/hr/salary">Salary</a>
+        </div>
+      </li>
+      <% } %>
     </ul>
     <span class="navbar-text">
      Hi, 
