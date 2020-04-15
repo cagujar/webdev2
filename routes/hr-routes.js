@@ -19,7 +19,7 @@ router.get('/emp',authCheck,(req, res)=>{
             console.log(err);
         }else{   
             console.log(res1.rows)  
-            res.render('employees',{test: res1.rows, user: req.user});                   
+            res.render('employee',{test: res1.rows, user: req.user});                   
               
         }        
     });
@@ -27,7 +27,7 @@ router.get('/emp',authCheck,(req, res)=>{
 });
 
 router.get('/dept',authCheck,(req, res)=>{
-    User.query(`select row_to_json(departments)  from "AGUJAR_JSON_HR".departments`,(err,res1)=>{
+    User.query(`select row_to_json()  from "AGUJAR_JSON_HR".departments`,(err,res1)=>{
         if(err){
             console.log(err);
         }else{   
@@ -40,7 +40,7 @@ router.get('/dept',authCheck,(req, res)=>{
 });
 
 router.get('/empdept',authCheck,(req, res)=>{
-    User.query(`SELECT row_to_json(get_user_dept) FROM "AGUJAR_JSON_HR".get_user_dept() `,(err,res1)=>{
+    User.query(`SELECT row_to_json(empdept_list) FROM "AGUJAR_JSON_HR".empdept_list() `,(err,res1)=>{
         if(err){
             console.log(err);
         }else{   
@@ -52,7 +52,7 @@ router.get('/empdept',authCheck,(req, res)=>{
 });
 
 router.get('/salary',authCheck,(req, res)=>{
-    User.query(`SELECT row_to_json(get_above_135) FROM "AGUJAR_JSON_HR".get_above_135() `,(err,res1)=>{
+    User.query(`SELECT row_to_json(salary_list) FROM "AGUJAR_JSON_HR".salary_list() `,(err,res1)=>{
         if(err){
             console.log(err);
         }else{   
